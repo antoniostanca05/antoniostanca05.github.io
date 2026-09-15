@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Portofoliu - Stanca Alexandru</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+      color: #333333;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    body.dark {
+      background-color: #1a1a2e;
+      color: #eaeaea;
+    }
+
+    header {
+      background-color: #2c7be5;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      position: relative;
+    }
+
+    .avatar {
+      width: 100px;
+      height: 100px;
+      background-color: white;
+      color: #2c7be5;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 36px;
+      font-weight: bold;
+      margin: 0 auto 15px auto;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 32px;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 16px;
+    }
+
+    #theme-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background-color: white;
+      color: #2c7be5;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    #theme-btn:hover {
+      background-color: #eaf2fd;
+    }
+
+    section {
+      background-color: white;
+      max-width: 700px;
+      margin: 20px auto;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease;
+    }
+
+    body.dark section {
+      background-color: #26264a;
+    }
+
+    section:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    }
+
+    section h2 {
+      color: #2c7be5;
+      border-bottom: 2px solid #2c7be5;
+      padding-bottom: 8px;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    li {
+      background-color: #eaf2fd;
+      color: #2c7be5;
+      padding: 8px 14px;
+      border-radius: 20px;
+      font-size: 14px;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    li:hover {
+      background-color: #2c7be5;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <button id="theme-btn">🌙 Mod întunecat</button>
+  <div class="avatar">SA</div>
+  <h1>Stanca Alexandru Antonio</h1>
+  <p>Student la Calculatoare | În formare ca Web Developer</p>
+</header>
+
+<section>
+  <h2>Despre mine</h2>
+  <p>
+    Sunt absolvent al Facultății de Electronică, Comunicații și Calculatoare, specializarea Calculatoare.
+    Mă aflu la început de drum în programare și învăț activ HTML, CSS și JavaScript, cu scopul de a-mi
+    construi o carieră ca dezvoltator web. Sunt motivat, serios și dornic să progresez rapid.
+  </p>
+</section>
+
+<section>
+  <h2>Competențe</h2>
+  <ul>
+    <li>HTML5</li>
+    <li>CSS3</li>
+    <li>JavaScript (bazic)</li>
+    <li>Structuri de date și algoritmi</li>
+    <li>Baze de date</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Proiect</h2>
+  <h3>Aplicație software CRUD pentru gestionarea datelor</h3>
+  <p>
+    Proiect de licență prin care am proiectat și implementat o aplicație software de tip CRUD
+    (Create, Read, Update, Delete), pentru gestionarea eficientă a datelor. Prin acest proiect
+    am aprofundat logica de operare pe date, structurarea informațiilor și fluxul de funcționare
+    al unei aplicații software.
+  </p>
+</section>
+
+<section>
+  <h2>Contact</h2>
+  <p>Email: antoniostanca@yahoo.com</p>
+  <p>Telefon: 0771 385 100</p>
+</section>
+
+<script>
+  const themeBtn = document.querySelector("#theme-btn");
+
+  themeBtn.addEventListener("click", function() {
+    document.body.classList.toggle("dark");
+
+    if (document.body.classList.contains("dark")) {
+      themeBtn.textContent = "☀️ Mod luminos";
+    } else {
+      themeBtn.textContent = "🌙 Mod întunecat";
+    }
+  });
+</script>
+
+</body>
+</html>
